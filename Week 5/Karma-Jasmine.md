@@ -1,4 +1,22 @@
-(Unit test the Todo application)
+# Unit testing with Karma and Jasmine
+
+This demo shows students how to get up and going with unit testing in Karma / Jasmine
+
+## High Level
+* [ ] Install Karma + Jasmine
+* [ ] Install Angular Test Dependencies (`angular-mocks` and `bardjs`)
+* [ ] Initialize Karma
+* [ ] Make changes to karma.conf.js
+	* [ ] Add script dependencies to the `files` section
+	* [ ] Add `sinon` to the `frameworks` array
+* [ ] Run Karma
+* [ ] Add `todo.controller.spec.js`
+	* [ ] Write a few basic calculator tests to demo Karma in action
+	* [ ] Write unit tests for TodoController, stubbing todoFactory using Sinon
+* [ ] Add `todo.factory.spec.js`
+	* [ ] Write unit tests for todoFactory, stubbing $http using $httpbackend
+
+## Steps
 
 ### Install Karma + Jasmine
 `npm install -g karma-cli`<br />
