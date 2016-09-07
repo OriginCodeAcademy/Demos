@@ -56,47 +56,6 @@ This demo is to show students the importance of good architecture in C# to allow
 
 **Add DatabaseFactory to `Todo.Data`**
 * [ ] Add `IDatabaseFactory.cs` to `Infrastructure` ([Click here to scroll to code sample](#idatabasefactory.cs))
-* [ ] Add `DatabaseFactory.cs` to `Infrastructure` ([Click here to scroll to code sample](#idatabasefactory.cs))
-
-**Repository Interface in `Todo.Core`**
-* [ ] Add `Infrastructure` folder to `Todo.Core`
-	* [ ] Add `IRepository.cs`
-	* [ ] Build `IRepository.cs` ([Click here to scroll to code sample](#irepository.cs))
-
-**Repository Implementation in `Todo.Data`**
-* [ ] Add `Repository.cs` to `Infrastructure` folder.
-* [ ] Build `Repository.cs` ([Click here to scroll to code sample](#repository.cs)) 
-
-**Entity Repository Interfaces (Interface Segregation Principle)**
-* [ ] Add `Repository` folder to `Todo.Core`
-* [ ] Add `ITodoRepository.cs` to `Repository` folder ([Click here to scroll to code sample](#itodorepository.cs))
-
-**Entity Repository Implementation (Open Closed Principle)**
-* [ ] Add `Repository` folder to `Todo.Data`
-* [ ] Add `TodoRepository.cs` to `Repository` folder ([Click here to scroll to code sample](#todorepository.cs))
-
-**Unit of Work**
-* [ ] Add `IUnitOfWork.cs` to `Todo.Data.Infrastructure` ([Click here to scroll to code sample](#iunitofwork.cs))
-* [ ] Add `UnitOfWork.cs` to `Todo.Data.Infrastructure` ([Click here to scroll to code sample](#unitofwork.cs))
-
-**Tying the projects together**
-* [ ] Add reference to `Todo.Core` and `Todo.Data` in `Todo.API`
-* [ ] Install `SimpleInjector` and `SimpleInjector.Integration.WebApi` via Nuget into `Todo.API`
-* [ ] Build `RegisterDependencies` method in `Global.asax.cs` 
-	* (See [this section of SimpleInjector documention](https://simpleinjector.readthedocs.io/en/latest/webapiintegration.html) to demo docs to students)
-	* [Click here to scroll to code sample](#global.asax.cs)
-
-**Refactor TodoController**
-* [ ] Refactor TodoController to use Dependency Inversion (Depend on abstractions rather than concrete implementations)
-	* ([Click here to scroll to code sample](#todocontroller.cs))
-
-**Test application**
-* [ ] Test the existing application
-
-
-### Code Samples
-
-#### IDatabaseFactory.cs
 ```csharp
 namespace Todo.Data.Infrastructure
 {
@@ -107,7 +66,7 @@ namespace Todo.Data.Infrastructure
 }
 ```
 
-#### DatabaseFactory.cs
+* [ ] Add `DatabaseFactory.cs` to `Infrastructure` ([Click here to scroll to code sample](#idatabasefactory.cs))
 ```csharp
 using System;
 
@@ -135,7 +94,10 @@ namespace Todo.Data.Infrastructure
 }
 ```
 
-#### IRepository.cs
+**Repository Interface in `Todo.Core`**
+* [ ] Add `Infrastructure` folder to `Todo.Core`
+	* [ ] Add `IRepository.cs`
+	* [ ] Build `IRepository.cs` ([Click here to scroll to code sample](#irepository.cs))
 ```csharp
 using System;
 using System.Linq;
@@ -164,12 +126,13 @@ namespace Todo.Core.Infrastructure
         EntityType Delete(EntityType entity);
     }
 }
-
 ```
 
-#### Repository.cs
-Use the `Implement Interface` quick action to show how interfaces work
+**Repository Implementation in `Todo.Data`**
+* [ ] Add `Repository.cs` to `Infrastructure` folder.
+* [ ] Build `Repository.cs` ([Click here to scroll to code sample](#repository.cs))
 
+Use the `Implement Interface` quick action to show how interfaces work
 ```csharp
 using System;
 using System.Data.Entity;
@@ -248,7 +211,10 @@ namespace Todo.Data.Infrastructure
 }
 ```
 
-#### ITodoRepository.cs
+
+**Entity Repository Interfaces (Interface Segregation Principle)**
+* [ ] Add `Repository` folder to `Todo.Core`
+* [ ] Add `ITodoRepository.cs` to `Repository` folder ([Click here to scroll to code sample](#itodorepository.cs))
 ```csharp
 using Todo.Core.Infrastructure;
 
@@ -260,7 +226,9 @@ namespace Todo.Core.Repository
 }
 ```
 
-#### TodoRepository.cs
+**Entity Repository Implementation (Open Closed Principle)**
+* [ ] Add `Repository` folder to `Todo.Data`
+* [ ] Add `TodoRepository.cs` to `Repository` folder ([Click here to scroll to code sample](#todorepository.cs))
 ```csharp
 using Todo.API.Infrastructure;
 using Todo.Core.Repository;
@@ -276,7 +244,8 @@ namespace Todo.Data.Repository
 }
 ```
 
-#### IUnitOfWork.cs
+**Unit of Work**
+* [ ] Add `IUnitOfWork.cs` to `Todo.Data.Infrastructure` ([Click here to scroll to code sample](#iunitofwork.cs))
 ```csharp
 namespace Todo.Data.Infrastructure
 {
@@ -287,7 +256,7 @@ namespace Todo.Data.Infrastructure
 }
 ```
 
-#### UnitOfWork.cs
+* [ ] Add `UnitOfWork.cs` to `Todo.Data.Infrastructure` ([Click here to scroll to code sample](#unitofwork.cs))
 ```csharp
 using Todo.API.Infrastructure;
 
@@ -310,7 +279,11 @@ namespace Todo.Data.Infrastructure
 }
 ```
 
-#### Global.asax.cs
+**Tying the projects together**
+* [ ] Add reference to `Todo.Core` and `Todo.Data` in `Todo.API`
+* [ ] Install `SimpleInjector` and `SimpleInjector.Integration.WebApi` via Nuget into `Todo.API`
+* [ ] Build `RegisterDependencies` method in `Global.asax.cs` 
+	* (See [this section of SimpleInjector documention](https://simpleinjector.readthedocs.io/en/latest/webapiintegration.html) to demo docs to students)
 ```csharp
 using SimpleInjector;
 using SimpleInjector.Integration.WebApi;
@@ -349,7 +322,8 @@ namespace Todo.API
 }
 ```
 
-#### TodosController.cs
+**Refactor TodoController**
+* [ ] Refactor TodoController to use Dependency Inversion (Depend on abstractions rather than concrete implementations)
 ```csharp
 using System;
 using System.Linq;
@@ -464,3 +438,6 @@ namespace Todo.API.Controllers
     }
 }
 ```
+
+**Test application**
+* [ ] Test the existing application
