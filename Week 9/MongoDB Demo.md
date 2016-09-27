@@ -1,12 +1,11 @@
 # MongoDB Demo
 
-This demo shows students how to build MEAN applications from scratch, without using the yeoman generator. 
+This demo shows students the basics of MongoDB, and how to model data relationships.
 
 ## High level steps
 - [ ] Supporting Tools
-- [ ] MongoDB Introduction
-- [ ] Project Setup
-
+- [ ] MongoDB Fu
+- [ ] Relationships
 
 ## Supporting Tools
 - [ ] MongoDB
