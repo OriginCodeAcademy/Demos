@@ -34,11 +34,11 @@ MongoDB Server
 
 `use origincodeacademy` - this points to a database. (origincodeacademy doesn't exist yet, but it will when we start adding things to it. everything in MongoDB is lazy loaded. If a collection doesn't exist - it'll be created when you add something to it.
 
-`db.students.add({})` - create a record
+`db.students.insert({})` - create a record
 
 `db.students.find({})` - gets all records (talk about primary key)
 
-`db.students.add({})*3` - make a few records
+`db.students.insert({})*3` - make a few records
 
 `db.students.find({ name: 'X' })` - demo querying using **filters**
 
