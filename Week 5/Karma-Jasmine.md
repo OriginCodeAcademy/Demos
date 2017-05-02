@@ -26,14 +26,14 @@ This demo shows students how to get up and going with unit testing in Karma / Ja
 [`karma-jasmine`](https://github.com/karma-runner/karma-jasmine): plugin for karma to run jasmine tests<br />
 [`jasmine-core`](https://www.npmjs.com/package/jasmine-core): core library for our jasmine tests<br />
 [`karma-chrome-launcher`](https://www.npmjs.com/package/karma-chrome-launcher): launches chrome to run unit tests<br />
-[`sinon`](http://sinonjs.org/): Standalone test spies, stubs and mocks for JavaScript.
-[`karma-sinon`](https://www.npmjs.com/package/karma-sinon): plugin for karma to work with sinon - a mocking framework
+[`sinon`](http://sinonjs.org/): Standalone test spies, stubs and mocks for JavaScript.<br />
+[`karma-sinon`](https://www.npmjs.com/package/karma-sinon): plugin for karma to work with sinon - a mocking framework.
 
 ### Install Angular Test Dependencies
 `bower install angular-mocks bardjs  --save-dev`<br />
 
-`angular-mocks`: a set of pre-written mocks for angular services<br />
-`bardjs`: makes it simple to use angular-mocks in your Jasmine tests
+[`angular-mocks`](https://github.com/angular/bower-angular-mocks): a set of pre-written mocks for angular services<br />
+[`bardjs`](): makes it simple to use angular-mocks in your Jasmine tests
 
 ### Init karma
 "now we have the necessary packages, I'm going to initialize karma in this project."<br />
